@@ -11,8 +11,8 @@ function App() {
         <HashRouter>
                 <nav>
                     <Link to="/"> Home </Link>
-                    <Link to="/herolist" className="heroListLink"> || Character List </Link>
-                    <Link to="/newhero" className="newHeroLink"> || New Character </Link>
+                    <Link to="/herolist" className="heroListLink"> || Hero List </Link>
+                    <Link to="/newhero" className="newHeroLink"> || Hero Character </Link>
                     <Link to="/scrolllist" className="scrollListLink"> || Scroll List </Link>
                     <Link to="/newscroll" className="newScrollLink"> || New Scroll </Link>
                 </nav>
