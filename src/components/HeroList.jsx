@@ -27,9 +27,9 @@ function HeroList(){
                     <li key={index}>
                         <h2>{hero.name}</h2>
                         <ul>
-                            {heroes.languages.map((language, index) => (
+                            {hero.languages?.map((language, index) => (
                                 <li key={index}>
-                                    <h3>{language.name}</h3>
+                                    <h3>{language}</h3>
                                 </li>
                             ))}
                         </ul>

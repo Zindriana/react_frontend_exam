@@ -6,6 +6,7 @@ function NewHero() {
     const [languages, setLanguages] = useState([]);
 
     function createHero(){
+        console.log("Creating hero with name:", newHeroName, "and languages:", languages);
         fetch(`${API_BASE_URL}/newhero`,  {
             method: 'POST',
             headers: {
@@ -13,7 +14,7 @@ function NewHero() {
             },
             body: JSON.stringify({
                 name: newHeroName,
-                language: languages,
+                languages: languages,
             }),
         })
 
