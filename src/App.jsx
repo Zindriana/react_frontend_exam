@@ -18,8 +18,8 @@ function App() {
                 </nav>
                 <Routes>
                     <Route path="/" element={<div>Home</div>}/>
-                    <Route path="/characterlist" element={<HeroList/>}/>
-                    <Route path="/newcharacter" element={<NewHero/>}/>
+                    <Route path="/herolist" element={<HeroList/>}/>
+                    <Route path="/newhero" element={<NewHero/>}/>
                     <Route path="/scrolllist" element={<ScrollList/>}/>
                     <Route path="/newscroll" element={<NewScroll/>}/>
                 </Routes>
