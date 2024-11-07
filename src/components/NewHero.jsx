@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import App from "../App.jsx";
 
 function NewHero() {
     const [newHeroName, setNewHeroName] = useState('');
@@ -9,6 +10,7 @@ function NewHero() {
     }
     return(
         <>
+            <App />
             <h3>Create a new hero</h3>
             <h4>Hero name</h4>
             <input className="newHeroName" type="text" placeholder="Name"
@@ -23,7 +25,7 @@ function NewHero() {
                 Elven
             </label>
             <label>
-                <input type="checkbox"  className="humanCheckbox" onChange={() => setLanguages()}/>
+                <input type="checkbox" className="humanCheckbox" onChange={() => setLanguages()}/>
                 Human
             </label>
             <label>
