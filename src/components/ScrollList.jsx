@@ -26,7 +26,7 @@ function ScrollList(){
 
     return (
         <>
-            <p>Scroll text: {scrollText}</p>
+            <p className="scrollText">Scroll text: {scrollText}</p>
             <h1>Scroll List</h1>
             <ul>
                 {scrolls.map((scroll, index) => (
