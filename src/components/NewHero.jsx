@@ -13,7 +13,7 @@ function NewHero() {
             },
             body: JSON.stringify({
                 name: newHeroName,
-                language: languages,
+                languages: languages,
             }),
         })
 

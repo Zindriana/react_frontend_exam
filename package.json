@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://zindriana.github.io/react-frontend_exam",
   "proxy": "http://localhost:7070",
   "scripts": {
     "dev": "vite",
