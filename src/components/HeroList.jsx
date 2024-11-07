@@ -14,10 +14,25 @@ function HeroList(){
                 return response.json();
             })
             .then(data => {
+                console.log('Fetched heroes:', data); // Lägg till denna rad för att se vad som hämtas
                 setHeroes(data);
             })
             .catch(error => console.error('Error:', error));
     }, []);
+
+    function handleChooseHero(selectedHero){
+            fetch(`${API_BASE_URL}/choosehero`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(selectedHero),
+            })
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch(error => console.error('Error updating character:', error));
+    }
 
     return(
         <>
@@ -26,6 +41,8 @@ function HeroList(){
                 {heroes.map((hero, index) => (
                     <li key={index}>
                         <h2>{hero.name}</h2>
+                        <button className="chooseHeroBtn" onClick={ () => handleChooseHero(hero)}>Choose hero</button>
+                        <h4>Choosen: {hero.choosen ? 'Yes' : 'No'}</h4>
                         <ul>
                             {hero.languages?.map((language, index) => (
                                 <li key={index}>
