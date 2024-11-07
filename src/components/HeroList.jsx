@@ -14,7 +14,6 @@ function HeroList(){
                 return response.json();
             })
             .then(data => {
-                console.log('Fetched heroes:', data); // Lägg till denna rad för att se vad som hämtas
                 setHeroes(data);
             })
             .catch(error => console.error('Error:', error));
