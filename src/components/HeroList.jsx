@@ -19,6 +19,20 @@ function HeroList(){
             .catch(error => console.error('Error:', error));
     }, []);
 
+    function handleChooseHero(selectedHero){
+            fetch(`${API_BASE_URL}/choosehero`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(selectedHero),
+            })
+                .then(data => {
+                    console.log('Success:', data);
+                })
+                .catch(error => console.error('Error updating character:', error));
+    }
+
     return(
         <>
             <h1>All heroes</h1>
@@ -26,10 +40,12 @@ function HeroList(){
                 {heroes.map((hero, index) => (
                     <li key={index}>
                         <h2>{hero.name}</h2>
+                        <button className="chooseHeroBtn" onClick={ () => handleChooseHero(hero)}>Choose hero</button>
+                        <h4>Choosen: {hero.choosen ? 'Yes' : 'No'}</h4>
                         <ul>
-                            {heroes.languages.map((language, index) => (
+                            {hero.languages?.map((language, index) => (
                                 <li key={index}>
-                                    <h3>{language.name}</h3>
+                                    <h3>{language}</h3>
                                 </li>
                             ))}
                         </ul>
