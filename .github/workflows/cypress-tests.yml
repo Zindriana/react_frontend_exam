@@ -33,3 +33,6 @@ jobs:
         run: |
          cd react_frontend/react_frontend_exam
           npx cypress run
+
+      - name: Build
+        run: npm run build
