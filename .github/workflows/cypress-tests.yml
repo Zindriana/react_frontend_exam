@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Print working directory
+        run: pwd
+
       - name: Run Cypress tests
         run: |
          cd react_frontend/react_frontend_exam
