@@ -28,4 +28,5 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run
+        working-directory: .\react_frontend\react_frontend_exam
 
