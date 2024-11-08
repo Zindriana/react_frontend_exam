@@ -27,6 +27,6 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress run
-        working-directory: react_frontend/react_frontend_exam
-
+        run: |
+         cd react_frontend/react_frontend_exam
+          npx cypress run
