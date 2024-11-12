@@ -6,6 +6,10 @@ on:
         - master
         - dev
 
+  pull_request:
+    branches:
+      - master
+
 permissions:
   contents: write
   pages: write
