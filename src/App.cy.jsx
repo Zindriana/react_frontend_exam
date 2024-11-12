@@ -5,6 +5,10 @@ import ScrollList from "./components/ScrollList.jsx";
 import HeroList from "./components/HeroList.jsx";
 import NewScroll from "./components/NewScroll.jsx";
 
+//Testerna skulle ha kunnat varit uppdelade i olika filer, ungefär som med backendtesterna,
+//för att det ska bli mer tydligt med vilket test som testar vad.
+//Fördelen med att alal testerna är i samma fil är att då testades allt varje gång och
+//därmed större chans att hitta oförutsedda buggar
 describe('<App />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
