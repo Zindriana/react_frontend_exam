@@ -3,12 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-        - master
-        - dev
-
-  pull_request:
-    branches:
-      - master
+      - cypress_testing
 
 permissions:
   contents: write
@@ -33,9 +28,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
